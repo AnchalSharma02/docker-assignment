@@ -1,11 +1,11 @@
-apiVersion: v1
+apiVersion: v2
 kind: Service
 metadata:
-  name: user-deployment
+  name: docker-assignment
 spec:
   type: ClusterIP
   selector:
-    app: user-deployment
+    app: docker-assignment
   ports:
   - port: 8080
     targetPort: 8080

@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: user-deployment
+  name: docker-assignment
 spec:
   selector:
     matchLabels:
-      app: user-deployment
+      app: docker-assignment
   template:
     metadata:
       labels:
-        app: user-deployment
+        app: docker-assignment
     spec:
       containers:
-      - name: user-deployment
-        image: docker.io/anchalsharma02/docker-assignment
+      - name: docker-assignment
+        image: docker.io/anchalsharma02/docker-assignment:v2
         ports:
         - containerPort: 8080
